@@ -27,7 +27,7 @@ $queueName = ".\private$\vms.mail"
 $Label = "Mein Label"
 $Priority = [System.Messaging.MessagePriority]::Normal
 $BodyString = "Mein Text der versendet werden soll..."
-$MSMQMessage = New-MSMQMessage -Label $Label -Priority $Priority -BodyString $BodyString
+$MSMQMessage = New-MSMQMessage -Label $Label -Priority $Priority -Body $BodyString
 
 # Message senden
 Send-MSMQMessage -queueName $queueName -MSMQMessage $MSMQMessage -Transaction
